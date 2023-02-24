@@ -7,7 +7,7 @@ var dataList={
         facebook_prod: "https://www.facebook.com/login"
     },
     userList: [
-        {user: 'dharani.k.s_90@hotmail.com', pass: "Da070#90", app: ['facebook']},
+        {user: 'email', pass: "pass", app: ['facebook']},
         {user: 'dharani1', pass: "test1", app: ['google']},
         {user: 'dharani2', pass: "test1", app: ['facebook']},
         {user: 'dharani3', pass: "test1", app: ['google']},
