@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "login-crome-extension",
+  "description": "login crome extension ",
+  "version": "1.0",
+  "author": "Dharani",
+  "action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "html/popup.html",
+    "default_title": "login crome extension Extension",
+    "default_script": "js/popup.js"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "browsingData"
+  ],
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lib/jquery-3.6.1.min.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/login*"
+
+      ],
+      "js": [
+        "js/content_script.js"
+      ],
+      "run_at":"document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://www.facebook.com/*"
+  ]
+}

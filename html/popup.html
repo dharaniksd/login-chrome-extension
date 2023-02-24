@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Login Helper</title>
+    </head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <body>
+        <!-- <h1>Click It.</h1>
+        <button id="clickIt">Click</button> -->
+       
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login Helper</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button> -->
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="switchId">
+                            <label class="form-check-label" for="flexSwitchCheckDefault" id="switchForId">OFF</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body container overflow-auto" style="width: 500px;height: 450px;">
+                <!-- <p>Modal body text goes here.</p> -->
+             
+                <div class="row">
+                    <div class="col">
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">App</label>
+                        <select class="form-select" id="appDropDownId"></select>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Env</label>
+                        <select class="form-select" id="envDropDownId"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Filter</span>
+                    <input type="text" class="form-control" id="filterInputId" placeholder="Filter" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="table-responsive">
+                    <table class="table" id="userTableId">
+                        <thead>
+                            <tr>
+                                <td>Sr.No</td>
+                                <td>User Name</td>
+                                <td>Password</td>
+                                <td>Action</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyId"></tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <footer class="">
+                    <div class="">
+                        <span class="mb-3 mb-md-0 text-muted">2022 Power by Company, Inc</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+           
+    </body>
+    <script src="/lib/jquery-3.6.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/popup.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+
+</html>
