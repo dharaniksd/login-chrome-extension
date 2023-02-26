@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       if(result.switch=='ON'){
         chrome.storage.sync.set(request.data).then(() => {
           console.log("switch is set to "+ request);
-          chrome.tabs.create({url: request.data.url, active: false}, function(){
+          chrome.tabs.create({url: request.data.url, active: true}, function(){
           
           });
         });

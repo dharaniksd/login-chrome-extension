@@ -84,18 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function clearBrowserAndLogin(url, user, pass){
   var app=$('#appDropDownId').val();
   chrome.browsingData.remove({
-    origins: [url]
-  },{
-    cacheStorage: true,
-    cookies: true,
-    fileSystems: true,
-    indexedDB: true,
-    localStorage: true,
-    serviceWorkers: true,
-    webSQL: true
-
+    "origins": [url]
+  }, {
+    "cacheStorage": true,
+    "cookies": true,
+    "fileSystems": true,
+    "indexedDB": true,
+    "localStorage": true,
+    "serviceWorkers": true,
+    "webSQL": true
   }, function(){
-    chrome.runtime.sendMessage({data: {url: url, user: user, pass: pass, app: app}}, function(response){
+    chrome.runtime.sendMessage({data: {url: url, user: user, pass: pass, app: app, type: 'login'}}, function(response){
       console.log('response back from sendMessage');
       console.log(response);
     })
@@ -103,9 +102,10 @@ function clearBrowserAndLogin(url, user, pass){
 }
 
 $(document).on('click', '#switchId' ,function(){
-  $('#switchForId').html($(this).is(':checked') ? 'ON': 'OFF');
-  chrome.storage.sync.set({ switch: $(this).is(':checked') ? 'ON': 'OFF' }).then(() => {
-    console.log("switch is set to " + $(this).is(':checked') ? 'ON': 'OFF');
+  $('#switchForId').html($(this).prop('checked') ? 'ON': 'OFF');
+  chrome.storage.sync.set({ switch: $(this).prop('checked') ? 'ON': 'OFF' }).then(() => {
+    console.log("switch is set to " + $(this).prop('checked') ? 'ON': 'OFF');
+    reset();
   });
 }); 
 
