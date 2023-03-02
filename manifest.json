@@ -35,7 +35,8 @@
       "matches": [
         "https://www.facebook.com/login*",
         "https://www.instagram.com/accounts/login*",
-        "https://login.microsoftonline.com/*"
+        "https://login.microsoftonline.com/*",
+        "https://github.com/login*"
 
       ],
       "js": [
@@ -50,6 +51,7 @@
     "https://www.facebook.com/*",
     "https://www.instagram.com/",
     "https://login.microsoftonline.com/*",
-    "https://portal.nttdatainc.com/*"
+    "https://portal.nttdatainc.com/*",
+    "https://github.com/*"
   ]
 }

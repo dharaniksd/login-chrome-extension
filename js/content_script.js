@@ -15,6 +15,11 @@ chrome.storage.sync.get(["switch","user","pass", "app", 'type']).then((result) =
       document.querySelector('input[name="loginfmt"]').value=result.user;
       document.querySelector('input[type="submit"]').click();
       
+    }else if(result.app ==='git'){
+      document.querySelector("#login_field").value=result.user;
+      document.querySelector("#password").value =result.pass;
+      document.querySelector("input[value='Sign in']").click();
+      
     }
   }
 });
