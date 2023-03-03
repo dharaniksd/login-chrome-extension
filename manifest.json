@@ -33,17 +33,25 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.facebook.com/login*"
+        "https://www.facebook.com/login*",
+        "https://www.instagram.com/accounts/login*",
+        "https://login.microsoftonline.com/*",
+        "https://github.com/login*"
 
       ],
       "js": [
-        "js/content_script.js"
+        "js/content_script.js",
+        "lib/jquery-3.6.1.min.js"
       ],
       "run_at":"document_end"
     }
   ],
   "host_permissions": [
     "https://www.youtube.com/*",
-    "https://www.facebook.com/*"
+    "https://www.facebook.com/*",
+    "https://www.instagram.com/",
+    "https://login.microsoftonline.com/*",
+    "https://portal.nttdatainc.com/*",
+    "https://github.com/*"
   ]
 }
