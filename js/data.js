@@ -10,7 +10,9 @@ var dataList={
         git_dev: 'https://github.com/login'
     },
     userList: [
-        {user: 'email', pass: "pass", app: ['facebook', 'instagram']},
+
+        {user: 'email', pass: "pass", app: ['facebook']},
+
         {user: 'dharani1', pass: "test1", app: ['google']},
         {user: 'dharani2', pass: "test1", app: ['facebook']},
         {user: 'dharani3', pass: "test1", app: ['google']},
