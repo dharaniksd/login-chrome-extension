@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // var checkPageButton = document.getElementById('clickIt');
-    // checkPageButton.addEventListener('click', function() {
-  
-    //   //chrome.tabs.getSelected(null, function(tab) {
-    //     alert("Hello World!");
-    //  // });
-
-    //  //chrome.browserAction.onClicked.addListener(function(tab) {
-    //   chrome.tabs.create({'url': 'https://www.youtube.com/', 'selected': true});
-    // //});
-    // }, false);
     reset();
 
     loadData(dataList.userList);
